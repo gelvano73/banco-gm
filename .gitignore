@@ -1,0 +1,42 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+build/
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Banco e uploads locais
+backend/data/
+backend/uploads/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs / cache
+logs/
+*.log
+.npm
+.vite/
+
+# IDE / SO
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cobertura / temp
+coverage/
+tmp/
+temp/
