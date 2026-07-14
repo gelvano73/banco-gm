@@ -111,9 +111,13 @@ Guia completo (env, admin, dados de teste): [docs/07-guia-local.md](docs/07-guia
 | [05 — Fluxos e diagramas](docs/05-fluxos-e-diagramas.md) | Sequências (login, PIX, crédito) |
 | [06 — Segurança](docs/06-seguranca.md) | JWT, MFA, lockout, auditoria |
 | [07 — Guia local](docs/07-guia-local.md) | Setup, credenciais, troubleshooting |
+| [08 — Deploy online](docs/08-deploy-online.md) | Render: link público para demo |
 
 ---
 
+## Demo online
+
+Siga o guia [Deploy no Render](docs/08-deploy-online.md) para publicar API + frontend com URL pública.
 ## Estrutura do repositório
 
 ```text

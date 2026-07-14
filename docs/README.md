@@ -11,6 +11,7 @@ Documentação técnica e funcional no padrão de um artefato de portfólio / on
 5. [Fluxos e diagramas](05-fluxos-e-diagramas.md)  
 6. [Segurança](06-seguranca.md)  
 7. [Guia local (setup)](07-guia-local.md)  
+8. [Deploy online (Render)](08-deploy-online.md)  
 
 ## Público-alvo
 
