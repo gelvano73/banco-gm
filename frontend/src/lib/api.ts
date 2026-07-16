@@ -1,6 +1,8 @@
 const API_URL =
-  import.meta.env.VITE_API_URL ??
-  (import.meta.env.PROD ? '' : 'http://localhost:3333');
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD
+    ? 'https://banco-gm-api-nao-use-banco-gm.onrender.com'
+    : 'http://localhost:3333');
 
 export type Address = {
   street: string;
