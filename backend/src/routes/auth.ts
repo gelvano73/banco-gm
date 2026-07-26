@@ -14,6 +14,7 @@ import {
   resetPassword,
 } from '../services/clientService.js';
 import { authenticateAdmin, findAdminByEmail } from '../services/adminService.js';
+import { createAccount } from '../services/accountService.js';
 import { signToken } from '../utils/jwt.js';
 import {
   createMfaChallenge,
@@ -48,6 +49,15 @@ export async function handleRegister(req: Request, res: Response) {
     }
 
     const client = await registerClient(parsed.data);
+
+    // Abre automaticamente uma conta corrente no cadastro (onboarding completo)
+    let account = null;
+    try {
+      account = createAccount(client.id, 'checking');
+    } catch (accountErr) {
+      console.error('Falha ao abrir conta corrente automática:', accountErr);
+    }
+
     const token = signToken({
       sub: client.id,
       email: client.email,
@@ -64,8 +74,11 @@ export async function handleRegister(req: Request, res: Response) {
     });
 
     return res.status(201).json({
-      message: 'Conta criada com sucesso.',
+      message: account
+        ? 'Conta criada com sucesso. Sua conta corrente já está ativa.'
+        : 'Conta criada com sucesso.',
       client,
+      account,
       token,
     });
   } catch (err) {

@@ -191,8 +191,8 @@ export function RegisterPage() {
                 />
               </div>
               <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.9rem' }}>
-                O envio de documentos é opcional. Depois do cadastro, você pode enviar RG/CNH no
-                painel se quiser — não bloqueia o uso da conta.
+                Ao concluir, sua <strong>conta corrente já é aberta automaticamente</strong> e você
+                entra direto no painel. O envio de documentos é opcional e pode ser feito depois.
               </p>
             </div>
           )}
