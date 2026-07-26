@@ -7,7 +7,7 @@ Documentação **passo a passo** do que foi implementado em cada módulo, no est
 ## Módulo 1 — Cadastro de clientes
 
 ### Objetivo
-Onboarding de pessoa física com dados cadastrais, documentos e autenticação.
+Onboarding de pessoa física com dados cadastrais, documentos (opcional) e autenticação.
 
 ### Passos implementados
 1. Formulário de cadastro no frontend (`RegisterPage`).  

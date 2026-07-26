@@ -191,7 +191,8 @@ export function RegisterPage() {
                 />
               </div>
               <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.9rem' }}>
-                Após criar a conta, você poderá enviar documentos de identidade no painel.
+                O envio de documentos é opcional. Depois do cadastro, você pode enviar RG/CNH no
+                painel se quiser — não bloqueia o uso da conta.
               </p>
             </div>
           )}

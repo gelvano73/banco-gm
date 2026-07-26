@@ -48,7 +48,7 @@ Documentação completa com diagramas C4, sequência e ER: pasta [`docs/`](docs/
 
 ## Módulos entregues (1–10)
 
-1. **Cadastro** — PF, CPF único, ≥18 anos, documentos, login, reset de senha  
+1. **Cadastro** — PF, CPF único, ≥18 anos, documentos opcionais, login, reset de senha  
 2. **Contas** — corrente/poupança, agência `0001`, número automático  
 3. **PIX** — chaves, envio, consulta, extrato  
 4. **Transferências** — TED + interna + auditoria  

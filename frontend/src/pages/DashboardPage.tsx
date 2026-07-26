@@ -268,9 +268,14 @@ export function DashboardPage() {
             </ul>
           </section>
 
-          <section className="panel">
-            <h2>Documentos</h2>
-            <p className="subtitle">Envie RG, CNH ou comprovante (JPG, PNG ou PDF até 5 MB).</p>
+          <section className="panel" id="documentos">
+            <h2>
+              Documentos <span className="optional-badge">Opcional</span>
+            </h2>
+            <p className="subtitle">
+              Não é obrigatório para usar o banco. Se quiser, envie RG, CNH ou comprovante (JPG, PNG
+              ou PDF até 5 MB) a qualquer momento.
+            </p>
             {error && <div className="alert alert-error">{error}</div>}
             {message && <div className="alert alert-ok">{message}</div>}
             <form onSubmit={onUpload}>
@@ -288,15 +293,17 @@ export function DashboardPage() {
                   accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf"
                   onChange={(e) => setFile(e.target.files?.[0] ?? null)}
                 />
-                <button className="btn btn-primary" type="submit" disabled={uploading}>
-                  {uploading ? 'Enviando...' : 'Enviar'}
+                <button className="btn btn-ghost" type="submit" disabled={uploading}>
+                  {uploading ? 'Enviando...' : 'Enviar documento'}
                 </button>
               </div>
             </form>
 
             <div className="doc-list">
               {documents.length === 0 && (
-                <p style={{ color: 'var(--text-muted)', margin: 0 }}>Nenhum documento enviado ainda.</p>
+                <p style={{ color: 'var(--text-muted)', margin: 0 }}>
+                  Nenhum documento enviado — você pode pular esta etapa.
+                </p>
               )}
               {documents.map((doc) => (
                 <div className="doc-item" key={doc.id}>
