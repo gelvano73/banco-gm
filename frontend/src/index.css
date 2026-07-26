@@ -754,7 +754,7 @@ body.app-authenticated {
 .authenticated-layout .quick-card,
 .authenticated-layout .service-card,
 .authenticated-layout .doc-item {
-  background: #ffffff;
+  background: #f0f2f1;
   border-color: var(--line);
   box-shadow: var(--shadow);
 }
@@ -775,7 +775,7 @@ body.app-authenticated {
 .authenticated-layout .account-card {
   background:
     linear-gradient(160deg, rgba(46, 229, 157, 0.1), transparent 50%),
-    #ffffff;
+    #f0f2f1;
 }
 
 .authenticated-layout .alert-error {
@@ -796,7 +796,7 @@ body.app-authenticated {
 .authenticated-layout .table-wrap,
 .authenticated-layout .list-card,
 .authenticated-layout .audit-item {
-  background: #ffffff;
+  background: #f0f2f1;
   border-color: var(--line);
 }
 
@@ -824,12 +824,12 @@ body.app-authenticated {
 .authenticated-layout .loan-results > div,
 .authenticated-layout .product-card,
 .authenticated-layout .admin-grid > div {
-  background: #ffffff;
+  background: #f0f2f1;
   border-color: var(--line);
 }
 
 .authenticated-layout .product-card.active {
-  background: linear-gradient(145deg, rgba(46, 229, 157, 0.2), #ffffff 55%);
+  background: linear-gradient(145deg, rgba(46, 229, 157, 0.2), #f0f2f1 55%);
   box-shadow: 0 0 0 1px rgba(30, 190, 127, 0.35);
 }
 
@@ -1077,5 +1077,349 @@ body.app-authenticated {
 @media (max-width: 860px) {
   .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* —— Responsivo: tablet e smartphone —— */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+.panel,
+.account-card,
+.payment-card,
+.doc-item,
+.product-card {
+  max-width: 100%;
+}
+
+.table-scroll,
+.statement-list,
+.history-list {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Tablet (até ~1024px) */
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-actions .btn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.88rem;
+  }
+
+  .auth-page,
+  .dashboard-page {
+    max-width: 920px;
+    padding: 1.5rem 1.1rem 2.5rem;
+  }
+
+  .accounts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+}
+
+/* Tablet pequeno / smartphone landscape */
+@media (max-width: 860px) {
+  .topbar {
+    padding: 0.8rem 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .brand span {
+    font-size: 1.05rem;
+  }
+
+  .brand-mark {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+
+  /* Em telas menores, a BottomNav cobre a navegação logada */
+  .nav-desktop-only {
+    display: none !important;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .hero-copy p {
+    font-size: 0.98rem;
+    max-width: none;
+  }
+
+  .hero-visual {
+    min-height: 260px;
+    border-radius: 22px;
+  }
+
+  .hero .nav-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero .nav-actions .btn {
+    flex: 1 1 auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .auth-page,
+  .dashboard-page {
+    padding: 1.15rem 0.9rem 1.5rem;
+  }
+
+  .authenticated-layout .app-shell {
+    padding-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .panel {
+    padding: 1.15rem;
+    border-radius: 16px;
+  }
+
+  .panel h1 {
+    font-size: 1.35rem;
+  }
+
+  .panel h2 {
+    font-size: 1.15rem;
+  }
+
+  .dashboard-grid,
+  .form-grid,
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .accounts-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .account-actions {
+    width: 100%;
+  }
+
+  .account-actions .btn {
+    flex: 1 1 calc(50% - 0.4rem);
+    text-align: center;
+  }
+
+  .file-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .file-row .btn {
+    width: 100%;
+  }
+
+  .profile-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .doc-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .balance-summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .loan-params,
+  .loan-results,
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-card-number {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    word-break: break-all;
+  }
+
+  .account-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .service-card {
+    min-height: 5.75rem;
+    padding: 0.7rem 0.35rem;
+  }
+
+  .quick-card {
+    flex: 0 0 5.1rem;
+    padding: 0.75rem 0.4rem;
+  }
+
+  .pix-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .pix-tabs .btn,
+  .steps .step-pill {
+    font-size: 0.8rem;
+  }
+
+  .bottom-nav {
+    padding-left: max(0.35rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.35rem, env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Smartphone */
+@media (max-width: 560px) {
+  .topbar {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .brand span {
+    font-size: 0.98rem;
+  }
+
+  .nav-actions .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-abrir-conta {
+    padding-inline: 0.85rem;
+  }
+
+  .auth-page,
+  .dashboard-page {
+    padding: 0.95rem 0.75rem 1.25rem;
+  }
+
+  .panel {
+    padding: 1rem 0.9rem;
+  }
+
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .service-card {
+    min-height: 6rem;
+  }
+
+  .service-card-label,
+  .quick-card-label {
+    font-size: 0.7rem;
+  }
+
+  .quick-access-track {
+    gap: 0.55rem;
+    margin-inline: -0.15rem;
+    padding-inline: 0.15rem;
+  }
+
+  .balance-total {
+    font-size: clamp(1.45rem, 7vw, 1.85rem);
+  }
+
+  .payment-card-meta,
+  .account-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .bank-card {
+    width: min(100%, 280px);
+    padding: 1.1rem;
+  }
+
+  .hero-visual {
+    min-height: 220px;
+  }
+}
+
+/* Telas muito estreitas */
+@media (max-width: 380px) {
+  .brand span {
+    max-width: 7.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .services-grid {
+    gap: 0.45rem;
+  }
+
+  .service-card {
+    min-height: 5.5rem;
+    border-radius: 14px;
+  }
+
+  .bottom-nav-item {
+    font-size: 0.62rem;
+  }
+}
+
+/* Desktop: bottom nav só na área logada mobile/tablet */
+@media (min-width: 861px) {
+  .authenticated-layout .bottom-nav {
+    display: none;
+  }
+
+  .authenticated-layout .app-shell {
+    padding-bottom: 0;
+  }
+
+  .nav-desktop-only {
+    display: inline-flex;
   }
 }

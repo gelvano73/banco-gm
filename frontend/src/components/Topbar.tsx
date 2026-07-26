@@ -6,34 +6,34 @@ export function Topbar() {
 
   return (
     <header className="topbar">
-      <Link to="/" className="brand">
+      <Link to={client ? '/app' : '/'} className="brand">
         <div className="brand-mark">G&M</div>
         <span>G&M Bank</span>
       </Link>
       <div className="nav-actions">
         {client ? (
           <>
-            <Link to="/app" className="btn btn-ghost">
+            <Link to="/app" className="btn btn-ghost nav-desktop-only">
               Minha conta
             </Link>
-            <Link to="/extrato" className="btn btn-ghost">
+            <Link to="/extrato" className="btn btn-ghost nav-desktop-only">
               Extrato
             </Link>
-            <Link to="/pix" className="btn btn-ghost">
+            <Link to="/pix" className="btn btn-ghost nav-desktop-only">
               PIX
             </Link>
-            <Link to="/transferencias" className="btn btn-ghost">
+            <Link to="/transferencias" className="btn btn-ghost nav-desktop-only">
               Transferir
             </Link>
-            <Link to="/seguranca" className="btn btn-ghost">
+            <Link to="/seguranca" className="btn btn-ghost nav-desktop-only">
               Segurança
             </Link>
             {client.role === 'admin' && (
-              <Link to="/admin" className="btn btn-ghost">
+              <Link to="/admin" className="btn btn-ghost nav-desktop-only">
                 Admin
               </Link>
             )}
-            <button type="button" className="btn btn-primary" onClick={logout}>
+            <button type="button" className="btn btn-primary btn-sair" onClick={logout}>
               Sair
             </button>
           </>
@@ -42,7 +42,7 @@ export function Topbar() {
             <Link to="/login" className="btn btn-ghost">
               Entrar
             </Link>
-            <Link to="/cadastro" className="btn btn-primary">
+            <Link to="/cadastro" className="btn btn-primary btn-abrir-conta">
               Abrir conta
             </Link>
           </>
