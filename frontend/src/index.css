@@ -709,6 +709,97 @@ button {
   }
 }
 
+/* —— Área logada: tema claro / fundo branco —— */
+
+body.app-authenticated {
+  color: #10241c;
+  background: #ffffff;
+  color-scheme: light;
+}
+
+.authenticated-layout {
+  --bg-deep: #ffffff;
+  --bg: #ffffff;
+  --bg-elevated: #f4f7f5;
+  --bg-soft: #eaf2ee;
+  --line: rgba(16, 52, 40, 0.12);
+  --text: #10241c;
+  --text-muted: #5d7368;
+  --shadow: 0 14px 36px rgba(16, 52, 40, 0.08);
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.authenticated-layout .topbar {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: var(--line);
+}
+
+.authenticated-layout .brand-mark {
+  background: linear-gradient(145deg, #1a6b52, #0f4636);
+  color: #7cffb2;
+}
+
+.authenticated-layout .btn-ghost {
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.authenticated-layout .btn-ghost:hover {
+  background: var(--bg-soft);
+}
+
+.authenticated-layout .panel,
+.authenticated-layout .quick-card,
+.authenticated-layout .service-card,
+.authenticated-layout .doc-item {
+  background: #ffffff;
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.authenticated-layout .field input,
+.authenticated-layout .field select {
+  background: #f7faf8;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.authenticated-layout .field input:focus,
+.authenticated-layout .field select:focus {
+  border-color: rgba(30, 190, 127, 0.55);
+  box-shadow: 0 0 0 3px rgba(46, 229, 157, 0.18);
+}
+
+.authenticated-layout .account-card {
+  background:
+    linear-gradient(160deg, rgba(46, 229, 157, 0.1), transparent 50%),
+    #ffffff;
+}
+
+.authenticated-layout .alert-error {
+  background: rgba(255, 107, 122, 0.1);
+  color: #b42335;
+}
+
+.authenticated-layout .alert-ok {
+  background: rgba(46, 229, 157, 0.12);
+  color: #0b6b45;
+}
+
+.authenticated-layout .optional-badge {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+}
+
+.authenticated-layout .table-wrap,
+.authenticated-layout .list-card,
+.authenticated-layout .audit-item {
+  background: #ffffff;
+  border-color: var(--line);
+}
+
 /* —— Mobile banking menu —— */
 
 .authenticated-layout .app-shell {
@@ -720,6 +811,49 @@ button {
   background:
     linear-gradient(145deg, rgba(46, 229, 157, 0.16), transparent 45%),
     rgba(15, 50, 40, 0.82);
+}
+
+.authenticated-layout .balance-summary {
+  background:
+    linear-gradient(145deg, rgba(46, 229, 157, 0.18), transparent 48%),
+    #f3faf6;
+  border: 1px solid var(--line);
+}
+
+.authenticated-layout .loan-params > div,
+.authenticated-layout .loan-results > div,
+.authenticated-layout .product-card,
+.authenticated-layout .admin-grid > div {
+  background: #ffffff;
+  border-color: var(--line);
+}
+
+.authenticated-layout .product-card.active {
+  background: linear-gradient(145deg, rgba(46, 229, 157, 0.2), #ffffff 55%);
+  box-shadow: 0 0 0 1px rgba(30, 190, 127, 0.35);
+}
+
+.authenticated-layout .quick-card-icon,
+.authenticated-layout .service-card-icon {
+  background: rgba(46, 229, 157, 0.14);
+  color: #0f7a52;
+}
+
+.authenticated-layout .bottom-nav {
+  background: rgba(255, 255, 255, 0.96);
+  border-top-color: var(--line);
+}
+
+.authenticated-layout .bottom-nav-item:hover {
+  color: var(--text);
+}
+
+.authenticated-layout .bottom-nav-item.active {
+  color: #0f7a52;
+}
+
+.authenticated-layout .payment-card-holder {
+  color: rgba(232, 247, 240, 0.9);
 }
 
 .balance-greeting {
